@@ -25,6 +25,22 @@ def build_db():
 
         print("*** BUILD ERROR: ", e, " ***")
 
+
+    try:
+
+        cursor.execute(
+            """
+            CREATE TABLE ticker_pairs(
+                ticker_a text,
+                ticker_b text
+            );
+            """
+        )
+
+    except Exception as e:
+
+        print("*** BUILD ERROR: ", e, " ***")
+
     cursor.close()
     connection.close()
 
