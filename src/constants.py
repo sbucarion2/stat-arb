@@ -1,0 +1,4 @@
+TICKERS = [
+    "SOXL",
+    "TQQQ",
+]
